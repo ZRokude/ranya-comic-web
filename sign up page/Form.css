@@ -1,0 +1,16 @@
+.col-12 {
+    padding: 1rem;
+}
+
+span {
+    color: red;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+img {
+    width: 50px;
+    border: 50%;
+}
