@@ -1,0 +1,9 @@
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.search-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

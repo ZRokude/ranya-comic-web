@@ -1,5 +1,6 @@
 <?php
 session_start();
+include $_SERVER['DOCUMENT_ROOT'] . "/2025_CODE/mysql.php";
 include "signUp.php";
 
 if (isset($_POST['name']) && (isset($_POST['email'])
@@ -28,15 +29,8 @@ if (isset($_POST['name']) && (isset($_POST['email'])
         $emailError = "Invalid Format";
     }
 
-    // password hash
         $hashpassword = password_hash($password, PASSWORD_DEFAULT);
-        $connect = new mysqli("localhost", "root", "", "komik");
 
-        if ($connect->connect_error){
-            die("connection:".$connect->connect_error);
-            }
-
-        // check username
         $stmt = $connect->prepare("SELECT COUNT(*) FROM user WHERE username = ?");
         $stmt->bind_param("s", $name);
         $stmt->execute();
@@ -48,7 +42,6 @@ if (isset($_POST['name']) && (isset($_POST['email'])
             die("username has been used");
         }
 
-    // connect mysql
     $stmt = $connect->prepare("INSERT INTO user (username, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $name, $email, $password);
 

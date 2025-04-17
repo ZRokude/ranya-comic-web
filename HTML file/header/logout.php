@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("Location: /2025_CODE/index.php");
+header("Location: /webKomik/ranya-comic-web/Index.php");
 exit();

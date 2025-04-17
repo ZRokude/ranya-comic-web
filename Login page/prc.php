@@ -1,6 +1,8 @@
 <?php 
 session_start();
 include "Login.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/webKomik/ranya-comic-web/mysql.php";
+  
 
 if (isset($_POST['email']) && (isset($_POST['password']))){
 
@@ -18,13 +20,6 @@ if (isset($_POST['email']) && (isset($_POST['password']))){
         die ("Invalid Format");
     }
 
-
-    $connect = new mysqli("localhost", "root", "", "komik");
-
-    if ($connect->connect_error){
-        die("connection failed:" . $connect->connect_error);
-    }
-
     $stmt = $connect->prepare("SELECT password FROM user WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -34,7 +29,7 @@ if (isset($_POST['email']) && (isset($_POST['password']))){
 
     if($dbpassword && password_verify($password, $dbpassword)){
         $_SESSION['email'] = $email;
-        header("Location: /2025_CODE/index.php");
+        header("Location: /webKomik/ranya-web-comic/Index.php");
         exit();
     }else {
         die("password or email wrong");

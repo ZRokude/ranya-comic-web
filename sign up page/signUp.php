@@ -9,7 +9,7 @@
 </head>
 <body>
   <?php 
-  include $_SERVER['DOCUMENT_ROOT'] . "/2025_CODE/HTML file/header/header.php"?>
+  include $_SERVER['DOCUMENT_ROOT'] . "/webKomik/ranya-comic-web/HTML file/header/header.php"?>
 
 <form id="size" action="process.php" method="POST" class="bg-secondary row g-3 position-absolute top-50 start-50 translate-middle shadow-lg p-3 mb-5 rounded">
 <h1 class="text-white">Create Account</h1>
