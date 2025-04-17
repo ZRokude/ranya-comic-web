@@ -1,5 +1,64 @@
+body {
+    background-color: rgb(70, 70, 70);
+}
+
 #dashboard {
     width: 250px;
     padding: 10px;
     left: 0;
 }
+
+.comic {
+    width: 250px;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .comic img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .comic button {
+    margin-top: 0.5rem;
+    background-color: rgb(67, 170, 255);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .comic p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .comic-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* .comic p {
+    order: 3;
+  }
+  .comic button {
+    order: 4;
+  }
+  .comic img {
+    order: 1;
+  } */

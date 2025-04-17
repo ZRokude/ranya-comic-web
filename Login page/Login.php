@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/2025_CODE/HTML file/header/header.php"?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "//webKomik/ranya-comic-web/HTML file/header/header.php"?>
   
 <form id="size" action="prc.php" method="POST" class="bg-secondary row g-3 position-absolute top-50 start-50 translate-middle shadow-lg p-3 mb-5 rounded">
 <h1 class="text-white">Login</h1>
@@ -29,7 +29,7 @@
     <button id="button" type="submit" class="btn btn-primary">Login</button>
   </div>
   <div class="col-12">
-    <span class="text-white">Don't have an account? <a class="text-info" href="/2025_CODE/sign up page/signUp.php">Sign Up</a></span>
+    <span class="text-white">Don't have an account? <a class="text-info" href="/webKomik/ranya-web-comic/sign up page/signUp.php">Sign Up</a></span>
   </div>
 </form>
     

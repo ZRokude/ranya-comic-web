@@ -17,7 +17,7 @@ session_start();?>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="Index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Library</a>
@@ -28,19 +28,18 @@ session_start();?>
                     <a class="nav-link" href="#">Action</a>
                 </li>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+            <div class="search-wrapper">
+              <form class="d-flex align-middle" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search Manga" aria-label="Search">
+              </form>
+            </div>
           <?php 
           if (isset($_SESSION['email'])) { ?>
             <img src="profil/profil.jpg" alt="" class="profil">
-            <a href="/2025_CODE/HTML file/header/logout.php" ><button class="btn btn-outline-info" type="submit">Logout</button></a>
+            <a href="/webKomik/ranya-comic-web/HTML file/header/logout.php" ><button class="btn btn-outline-info" type="submit">Logout</button></a>
           <?php } else {?>
-            <a href="/2025_CODE/Login page/Login.php"><button class="btn btn-outline-success" type="submit">Login</button></a>
+            <a href="/webKomik/ranya-comic-web/Login page/Login.php"><button class="btn btn-outline-success" type="submit">Login</button></a>
           <?php }?>
           </div>
         </div>
